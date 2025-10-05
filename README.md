@@ -6,7 +6,7 @@ This is still very early in development.
 
 ## Usage
 
-For it to work properly, `essentials` must be in the same directory as the script you intend to use it in.
+For it to work properly, `essentials.py` must be in the same directory as the script you intend to use it in.
 Import it by writing `import essentials` at the beginning of the script.
 
 ### 1. `title`
