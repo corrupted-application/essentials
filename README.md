@@ -32,4 +32,4 @@ essentials.beep(800, 500)
 
 **Description:**
 - Plays a beep using Powershell (This is only available for Windows for now.)
-- The first parameter (800) is frequency, while the second parameter (500) is duration in milliseconds.
+- The first parameter (800) is frequency in Hz, while the second parameter (500) is duration in milliseconds.
