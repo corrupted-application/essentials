@@ -5,6 +5,9 @@ It was originally made for my own use, but I figured someone might find it helpf
 
 ## Usage
 
+For it to work properly, `essentials` must be in the same directory as the script you intend to use it in.
+Import it by writing `import essentials` at the beginning of the script.
+
 ### 1. `title`
 essentials.title("Title")
 
