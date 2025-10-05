@@ -27,7 +27,7 @@ essentials.version()
 **Description:**  
 - Displays the version of `essentials` being run.
 
-### 4. 'beep'
+### 4. `beep`
 essentials.beep(800, 500)
 
 **Description:**
