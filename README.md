@@ -2,6 +2,7 @@
 
 A simple Python module that implements some (maybe) useful features.  
 It was originally made for my own use, but I figured someone might find it helpful.
+This is still very early in development.
 
 ## Usage
 
