@@ -1,6 +1,6 @@
 """
 Essentials by corrupted-application
-Version 0.0.2.5
+Version 0.0.3
 """
 
 import subprocess
@@ -23,7 +23,15 @@ def title(title_name):
     print("[essentials]: Something went wrong during title command execution, or your operating system does not support title changes")
 
 def version():
-    print("[essentials]: Essentials 0.0.2.5")
+    print("[essentials]: Essentials 0.0.3")
+
+def beep(frequency=800, duration=500):
+ if os.name == "nt":
+     beep_nt(frequency, duration)
+ elif os.name == "posix":
+     beep_pos() # calls to beep_posix, still works only if terminal supports bell
+ else:
+     print("[essentials]: Something went wrong during beep command execution, or your operating system does not support beep command execution.")
 
 def beep_nt(frequency=800, duration=500):
  if os.name == "nt":
