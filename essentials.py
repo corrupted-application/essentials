@@ -1,6 +1,6 @@
 """
 Essentials by corrupted-application
-Version 0.0.2.4
+Version 0.0.2.5
 """
 
 import subprocess
@@ -23,11 +23,17 @@ def title(title_name):
     print("[essentials]: Something went wrong during title command execution, or your operating system does not support title changes")
 
 def version():
-    print("[essentials]: Essentials 0.0.2.4")
+    print("[essentials]: Essentials 0.0.2.5")
 
-def beep(frequency=800, duration=500):
+def beep_nt(frequency=800, duration=500):
  if os.name == "nt":
     ps_command = f"[console]::beep({frequency}, {duration})"
     subprocess.run(["powershell", "-Command", ps_command])
  else:
-    print("[essentials]: Something went wrong during beep command execution, or you are running it on an operating system different from Windows, which essentials does not currently support.")
+    print("[essentials]: Something went wrong during beep_nt command execution, or you are running it on an operating system different from Windows, which beep_nt does not support.")
+
+def beep_pos():
+ if os.name == "posix":
+     os.system("echo -e '\a'")  # bell, only works if terminal supports it
+ else:
+     print("[essentials]: Something went wrong during beep_pos command execution, or you are running it on a non-unix based operating system, which beep_pos does not support.")
