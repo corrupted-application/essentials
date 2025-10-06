@@ -25,20 +25,20 @@ essentials.clear()
 essentials.version()
 
 **Description:**  
-- Displays the version of `essentials` being run.
+- Displays the version of `essentials` being ran.
 
 ### 4. `beep_nt`
 essentials.beep_nt(800, 500)
 
 **Description:**
 - Variant of the `beep` command for Windows.
-- Plays a beep using Powershell
+- Plays a beep using Powershell.
 - The first parameter (800) is frequency in Hz, while the second parameter (500) is duration in milliseconds.
 
 ### 5. `beep_pos`
 essentials.beep_pos()
 
 **Description:**
-- Variant of the `beep` command for both Unix-based and Unix-like operating systems (POSIX)
-- Plays a beep using the ASCII bell character. It plays a beep when triggered, but it might not work for all terminals (not all terminals support the bell character.
+- Variant of the `beep` command for both Unix-based and Unix-like operating systems (POSIX).
+- Plays a beep using the ASCII bell character. It plays a beep when triggered, but it might not work for all terminals (not all terminals support the bell character.)
 - The frequency and duration cannot be changed.
