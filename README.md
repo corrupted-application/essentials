@@ -28,7 +28,7 @@ essentials.clear()
 essentials.version()
 
 **Description:**  
-- Displays the version of `essentials` being ran.
+- Displays the version of `essentials` being run.
 
 ### 4. `beep_nt`
 essentials.beep_nt(800, 500)
