@@ -37,6 +37,7 @@ essentials.beep_nt(800, 500)
 - Variant of the `beep` command for Windows.
 - Plays a beep using Powershell.
 - The first parameter (800) is frequency in Hz, while the second parameter (500) is duration in milliseconds.
+- You can also call the command without specifying parameters, it is 800, 500 by default.
 
 ### 5. `beep_pos`
 essentials.beep_pos()
