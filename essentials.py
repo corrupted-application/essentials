@@ -1,10 +1,11 @@
 """
 Essentials by corrupted-application
-Version 0.0.3
+Version 0.0.3.1
 """
 
 import subprocess
 import os
+import winsound
 
 def clear():
  if os.name == "posix":
@@ -23,7 +24,7 @@ def title(title_name):
     print("[essentials]: Something went wrong during title command execution, or your operating system does not support title changes")
 
 def version():
-    print("[essentials]: Essentials 0.0.3")
+    print("[essentials]: Essentials 0.0.3.1")
 
 def beep(frequency=800, duration=500):
  if os.name == "nt":
@@ -35,8 +36,7 @@ def beep(frequency=800, duration=500):
 
 def beep_nt(frequency=800, duration=500):
  if os.name == "nt":
-    ps_command = f"[console]::beep({frequency}, {duration})"
-    subprocess.run(["powershell", "-Command", ps_command])
+    winsound.Beep(frequency, duration) # opted for winsound.Beep instead of powershell for better support for older windows hosts without powershell
  else:
     print("[essentials]: Something went wrong during beep_nt command execution, or you are running it on an operating system different from Windows, which beep_nt does not support.")
 
