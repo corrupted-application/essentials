@@ -8,8 +8,9 @@ This is still very early in development.
 
 For it to work properly, `essentials.py` must be in the same directory as the script you intend to use it in.
 After you have moved `essentials.py` to your script's directory, import it by writing `import essentials` at the beginning of the script.
-If you find that one of the commands does not work for you, check the documentation to see if you are using it correctly. If any bugs occur,
-feel free to report them in the Issues tab.
+
+If you find that one of the commands does not work for you, check the documentation to see if you are using it correctly.
+**If any bugs occur, feel free to report them in the Issues tab.**
 
 ### 1. `title`
 essentials.title("Title")
