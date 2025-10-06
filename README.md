@@ -37,6 +37,7 @@ essentials.beep(800, 500)
 - Universal variant of the `beep` command.
 - Parameters can be changed, 800 is frequency in Hz, and 500 is duration of the beep in milliseconds. You can also run it without specifying parameters, 800, 500 is default.
 - Detects the operating system, then calls to either beep_nt or beep_pos.
+- Keep in mind, if it is being ran on a Unix-like or Unix-based system, the parameters will not change anything, they are only intended for Windows.
 - It might not work for all terminals (since it is based on beep_pos, and not all terminals support the bell character.)
 
 ### 5. `beep_nt`
