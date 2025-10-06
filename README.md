@@ -30,7 +30,16 @@ essentials.version()
 **Description:**  
 - Displays the version of `essentials` being run.
 
-### 4. `beep_nt`
+### 4. `beep`
+essentials.beep(800, 500)
+
+**Description:**
+- Universal variant of the `beep` command.
+- Parameters can be changed, 800 is frequency in Hz, and 500 is duration of the beep in milliseconds. You can also run it without specifying parameters, 800, 500 is default.
+- Detects the operating system, then calls to either beep_nt or beep_pos.
+- It might not work for all terminals (since it is based on beep_pos, and not all terminals support the bell chcracter.)
+
+### 5. `beep_nt`
 essentials.beep_nt(800, 500)
 
 **Description:**
@@ -39,7 +48,7 @@ essentials.beep_nt(800, 500)
 - The first parameter (800) is frequency in Hz, while the second parameter (500) is duration in milliseconds.
 - You can also call the command without specifying parameters, it is 800, 500 by default.
 
-### 5. `beep_pos`
+### 6. `beep_pos`
 essentials.beep_pos()
 
 **Description:**
