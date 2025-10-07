@@ -7,7 +7,7 @@ This is still very early in development.
 ## Usage
 
 For it to work properly, `essentials.py` must be in the same directory as the script you intend to use it in.
-After you have moved `essentials.py` to your script's directory, import it by writing `import essentials` at the beginning of the script.
+After you have moved `essentials.py` to your script's directory, import it by appending `import essentials` to the beginning of the script.
 
 If you find that one of the commands does not work for you, check the documentation to see if you are using it correctly.
 **If any bugs occur, feel free to report them in the Issues tab.**
@@ -56,3 +56,6 @@ essentials.beep_pos()
 - Variant of the `beep` command for both Unix-based and Unix-like operating systems (POSIX).
 - Plays a beep using the ASCII bell character. It plays a beep when triggered, but it might not work for all terminals (not all terminals support the bell character.)
 - The frequency and duration cannot be changed.
+
+
+Special thanks to Lyra for some suggestions regarding this README
