@@ -67,6 +67,7 @@ essentials.cprint("Text", essentials.Color.COLORNAME)
 - May not always work correctly on Windows 8.1 and older.
 - Works on POSIX systems.
 - Works correctly on Windows 10 and newer.
+- It is important you use cprint like such: essentials.cprint("Text", essentials.Color.COLORNAME), otherwise you will encounter an error.
 
 **Supported colours:**
 - RED
