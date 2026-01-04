@@ -1,6 +1,6 @@
 """
 Essentials by corrupted-application
-Version 0.0.4
+Version 0.0.4.1
 """
 
 import subprocess
@@ -30,7 +30,7 @@ def title(title_name):
                    RuntimeWarning, stacklevel=2)
 
 def version():
-  print("[essentials]: Essentials 0.0.4")
+  print("[essentials]: Essentials 0.0.4.1")
 
 def beep(frequency=800, duration=500):
  if os.name == "nt":
@@ -47,6 +47,7 @@ def beep_pos():
                   "Your code is using a deprecated command (essentials.beep.pos())."
                   "Please switch to the essentials.beep command. This command will be removed in a future release.",
                   DeprecationWarning, stacklevel=2)
+
     os.system("echo -e '\a'")
 
 def beep_nt(frequency=800, duration=500):
@@ -56,7 +57,7 @@ def beep_nt(frequency=800, duration=500):
                 DeprecationWarning, stacklevel=2)
     winsound.Beep(frequency, duration)
 
-class Color: # ansi escape sequences
+class Color:
     RED = '\033[31m'
     GREEN = '\033[32m'
     YELLOW = '\033[33m'
@@ -72,7 +73,25 @@ class Color: # ansi escape sequences
     BRIGHT_MAGENTA = '\033[95m'
     BRIGHT_CYAN = '\033[96m'
     BRIGHT_WHITE = '\033[97m'
+    BLACK_BG = '\033[40m'
+    RED_BG = '\033[41m'
+    GREEN_BG = '\033[42m'
+    YELLOW_BG = '\033[43m'
+    BLUE_BG = '\033[44m'
+    MAGENTA_BG = '\033[45m'
+    CYAN_BG = '\033[46m'
+    WHITE_BG = '\033[47m'
+    BRIGHT_BLACK_BG = '\033[100m' # gray
+    BRIGHT_RED_BG = '\033[101m'
+    BRIGHT_GREEN_BG = '\033[102m'
+    BRIGHT_YELLOW_BG = '\033[103m'
+    BRIGHT_BLUE_BG = '\033[104m'
+    BRIGHT_MAGENTA_BG = '\033[105m'
+    BRIGHT_CYAN_BG = '\033[106m'
+    BRIGHT_WHITE_BG = '\033[107m'
 
 def cprint(text, color=Color.RESET):
     print(f"{color}{text}{Color.RESET}")
 
+if __name__ == '__main__':
+    cprint("[essentials]: You have ran essentials as a script. This is very likely a mistake, as essentials is a module.", Color.YELLOW)
