@@ -64,12 +64,14 @@ essentials.cprint("Text", essentials.Color.COLORNAME)
 
 **Description:**
 - Allows colorful text in the terminal using ANSI escape sequences.
+- Allows colorful backgrounds for text.
 - May not always work correctly on Windows 8.1 and older.
 - Works on POSIX systems.
 - Works correctly on Windows 10 and newer.
 - It is important you use cprint like such: essentials.cprint("Text", essentials.Color.COLORNAME), otherwise you will encounter an error.
+- Text and background colours can be combined: essentials.cprint("Text", essentials.Color.BRIGHT_WHITE + essentials.Color.BLACK_BG)
 
-**Supported colours:**
+**Supported text colours:**
 - RED
 - GREEN
 - YELLOW
@@ -84,5 +86,23 @@ essentials.cprint("Text", essentials.Color.COLORNAME)
 - BRIGHT_MAGENTA
 - BRIGHT_CYAN
 - BRIGHT_WHITE
+
+**Supported background colours:**
+- BLACK_BG
+- RED_BG
+- GREEN_BG
+- YELLOW_BG
+- BLUE_BG
+- MAGENTA_BG
+- CYAN_BG
+- WHITE_BG
+- BRIGHT_BLACK_BG
+- BRIGHT_RED_BG
+- BRIGHT_GREEN_BG
+- BRIGHT_YELLOW_BG
+- BRIGHT_BLUE_BG
+- BRIGHT_MAGENTA_BG
+- BRIGHT_CYAN_BG
+- BRIGHT_WHITE_BG
 
 Special thanks to Lyra for some suggestions regarding this README
