@@ -68,8 +68,8 @@ essentials.cprint("Text", essentials.Color.COLORNAME)
 - May not always work correctly on Windows 8.1 and older.
 - Works on POSIX systems.
 - Works correctly on Windows 10 and newer.
-- It is important you use cprint like such: essentials.cprint("Text", essentials.Color.COLORNAME), otherwise you will encounter an error.
-- Text and background colours can be combined: essentials.cprint("Text", essentials.Color.BRIGHT_WHITE + essentials.Color.BLACK_BG)
+- It is important you use cprint like such: ```essentials.cprint("Text", essentials.Color.COLORNAME)```, otherwise you will encounter an error.
+- Text and background colours can be combined: ```essentials.cprint("Text", essentials.Color.BRIGHT_WHITE + essentials.Color.BLACK_BG)```
 
 **Supported text colours:**
 - RED
