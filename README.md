@@ -13,25 +13,25 @@ If you find that one of the commands does not work for you, check the documentat
 **If any bugs occur, feel free to report them in the Issues tab.**
 
 ### 1. `title`
-essentials.title("Title")
+`essentials.title("Title")`
 
 **Description:**  
 - Changes the window title.
 
 ### 2. `clear`
-essentials.clear()
+`essentials.clear()`
 
 **Description:**  
 - Clears the console window.
 
 ### 3. `version`
-essentials.version()
+`essentials.version()`
 
 **Description:**  
 - Displays the version of `essentials` being run.
 
 ### 4. `beep`
-essentials.beep(800, 500)
+`essentials.beep(800, 500)`
 
 **Description:**
 - Universal beep command.
@@ -41,7 +41,7 @@ essentials.beep(800, 500)
 - It might not work for all terminals on POSIX systems (using ASCII bell character)
 
 ### 5. `beep_nt`
-essentials.beep_nt(800, 500)
+`essentials.beep_nt(800, 500)`
 
 **Description:**
 - Variant of the `beep` command for Windows.
@@ -51,7 +51,7 @@ essentials.beep_nt(800, 500)
 - It is a deprecated command and will be removed in a future update. Use essentials.beep instead.
 
 ### 6. `beep_pos`
-essentials.beep_pos()
+`essentials.beep_pos()`
 
 **Description:**
 - Variant of the `beep` command for both Unix-based and Unix-like operating systems (POSIX).
@@ -60,7 +60,7 @@ essentials.beep_pos()
 - It is a deprecated command and will be removed in a future update. Use essentials.beep instead.
 
 ### 7. `cprint`
-essentials.cprint("Text", essentials.Color.COLORNAME)
+`essentials.cprint("Text", essentials.Color.COLORNAME)`
 
 **Description:**
 - Allows colorful text in the terminal using ANSI escape sequences.
@@ -68,8 +68,8 @@ essentials.cprint("Text", essentials.Color.COLORNAME)
 - May not always work correctly on Windows 8.1 and older.
 - Works on POSIX systems.
 - Works correctly on Windows 10 and newer.
-- It is important you use cprint like such: ```essentials.cprint("Text", essentials.Color.COLORNAME)```, otherwise you will encounter an error.
-- Text and background colours can be combined: ```essentials.cprint("Text", essentials.Color.BRIGHT_WHITE + essentials.Color.BLACK_BG)```
+- It is important you use cprint like such: `essentials.cprint("Text", essentials.Color.RED)`, otherwise you will encounter an error.
+- Text and background colours can be combined: `essentials.cprint("Text", essentials.Color.BRIGHT_WHITE + essentials.Color.BLACK_BG)`
 
 **Supported text colours:**
 - RED
