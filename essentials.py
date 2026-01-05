@@ -1,13 +1,16 @@
 """
 Essentials by corrupted-application
-Version 0.0.4.1
+Version 0.0.4.2
 """
 
 import subprocess
 import warnings
 import os
+import time
 if os.name == 'nt':
   import winsound # fix for POSIX systems, would result in hang due to winsound being loaded, which is not meant to be used on POSIX systems
+
+ver = "0.0.4.2"
 
 def clear():
  if os.name == "posix":
@@ -21,7 +24,7 @@ def clear():
 
 def title(title_name):
  if os.name == "posix":
-  print(f"\033]0;{title_name}\007", end="")
+  print(f"\033]0;{title_name}\007", end="") # ansi escape sequence to change title on posix systems
  elif os.name == "nt":
   os.system(f'title {title_name}')
  else:
@@ -30,13 +33,13 @@ def title(title_name):
                    RuntimeWarning, stacklevel=2)
 
 def version():
-  print("[essentials]: Essentials 0.0.4.1")
+  print(f"[essentials]: Essentials {ver}")
 
 def beep(frequency=800, duration=500):
  if os.name == "nt":
     winsound.Beep(frequency, duration)
  elif os.name == "posix":
-    os.system("echo -e '\a'") # works only if terminal supports bell
+    os.system("echo -e '\a'") # works only if terminal supports bell (ascii bell character)
  else:
     warnings.warn("Something went wrong during beep command execution,"
                   "or your operating system does not support beep command execution. (essentials.beep)",
@@ -95,3 +98,11 @@ def cprint(text, color=Color.RESET):
 
 if __name__ == '__main__':
     cprint("[essentials]: You have ran essentials as a script. This is very likely a mistake, as essentials is a module.", Color.YELLOW)
+    time.sleep(2)
+    for quitting in range(3, 0, -1): # reverse range
+     clear()
+     print(f"Quitting in {quitting} seconds...")
+     time.sleep(1)
+     if quitting == 0:
+         clear()
+         exit()
