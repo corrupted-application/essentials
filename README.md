@@ -23,6 +23,7 @@ If you find that one of the commands does not work for you, check the documentat
 
 **Description:**  
 - Clears the console window.
+- As of 0.0.5, no longer uses shell=True for POSIX systems.
 
 ### 3. `version`
 `essentials.version()`
@@ -40,26 +41,7 @@ If you find that one of the commands does not work for you, check the documentat
 - Keep in mind, if it is being ran on a Unix-like or Unix-based system, the parameters will not change anything, they are only intended for Windows.
 - It might not work for all terminals on POSIX systems (using ASCII bell character)
 
-### 5. `beep_nt`
-`essentials.beep_nt(800, 500)`
-
-**Description:**
-- Variant of the `beep` command for Windows.
-- Plays a beep using winsound.
-- The first parameter (800) is frequency in Hz, while the second parameter (500) is duration in milliseconds.
-- You can also call the command without specifying parameters, it is 800, 500 by default.
-- It is a deprecated command and will be removed in a future update. Use essentials.beep instead.
-
-### 6. `beep_pos`
-`essentials.beep_pos()`
-
-**Description:**
-- Variant of the `beep` command for both Unix-based and Unix-like operating systems (POSIX).
-- Plays a beep using the ASCII bell character. It plays a beep when triggered, but it might not work for all terminals (not all terminals support the bell character.)
-- The frequency and duration cannot be changed.
-- It is a deprecated command and will be removed in a future update. Use essentials.beep instead.
-
-### 7. `cprint`
+### 5. `cprint`
 `essentials.cprint("Text", essentials.Color.COLORNAME)`
 
 **Description:**
@@ -104,5 +86,12 @@ If you find that one of the commands does not work for you, check the documentat
 - BRIGHT_MAGENTA_BG
 - BRIGHT_CYAN_BG
 - BRIGHT_WHITE_BG
+
+### 6. `sysinfo`
+`essentials.sysinfo()`
+
+**Description:**
+- Shows system info.
+- `processor` parameter may sometimes be blank for POSIX systems, will be fixed in 0.0.5.1
 
 Special thanks to Lyra for some suggestions regarding this README
