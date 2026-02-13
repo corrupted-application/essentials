@@ -1,20 +1,21 @@
 """
 Essentials by corrupted-application
-Version 0.0.4.2
+Version 0.0.5
 """
 
 import subprocess
 import warnings
 import os
 import time
+import platform
 if os.name == 'nt':
   import winsound # fix for POSIX systems, would result in hang due to winsound being loaded, which is not meant to be used on POSIX systems
 
-ver = "0.0.4.2"
+ver = "0.0.5"
 
 def clear():
  if os.name == "posix":
-  subprocess.run("clear", shell=True)
+  subprocess.run("clear")
  elif os.name == "nt":
   subprocess.run("cls", shell=True)
  else:
@@ -39,26 +40,11 @@ def beep(frequency=800, duration=500):
  if os.name == "nt":
     winsound.Beep(frequency, duration)
  elif os.name == "posix":
-    os.system("echo -e '\a'") # works only if terminal supports bell (ascii bell character)
+    print("\a", end="", flush=True) # works only if terminal supports bell (ascii bell character)
  else:
     warnings.warn("Something went wrong during beep command execution,"
                   "or your operating system does not support beep command execution. (essentials.beep)",
                   RuntimeWarning, stacklevel=2)
-
-def beep_pos():
-    warnings.warn(
-                  "Your code is using a deprecated command (essentials.beep.pos())."
-                  "Please switch to the essentials.beep command. This command will be removed in a future release.",
-                  DeprecationWarning, stacklevel=2)
-
-    os.system("echo -e '\a'")
-
-def beep_nt(frequency=800, duration=500):
-    warnings.warn(
-                "Your code is using a deprecated command (essentials.beep.nt())."
-                "Please switch to the essentials.beep command. This command will be removed in a future release.",
-                DeprecationWarning, stacklevel=2)
-    winsound.Beep(frequency, duration)
 
 class Color:
     RED = '\033[31m'
@@ -95,6 +81,20 @@ class Color:
 
 def cprint(text, color=Color.RESET):
     print(f"{color}{text}{Color.RESET}")
+
+def sysinfo():
+    cprint("[essentials]: System Information\n", Color.YELLOW)
+
+    cprint(f"[Operating System]: {platform.system()} {platform.release()} {platform.version()}", Color.YELLOW)
+    cprint(f"[Platform]: {platform.platform()}", Color.YELLOW)
+    cprint(f"[Hostname]: {platform.node()}", Color.YELLOW)
+    cprint(f"[Machine Type]: {platform.machine()}", Color.YELLOW)
+    cprint(f"[Processor]: {platform.processor()}\n", Color.YELLOW)
+
+    cprint("[essentials]: Python Details\n", Color.YELLOW)
+    cprint(f"[Python Version]: {platform.python_version()}", Color.YELLOW)
+    cprint(f"[Python Implementation]: {platform.python_implementation()}", Color.YELLOW)
+    cprint(f"[Python Compiler]: {platform.python_compiler()}", Color.YELLOW)
 
 if __name__ == '__main__':
     cprint("[essentials]: You have ran essentials as a script. This is very likely a mistake, as essentials is a module.", Color.YELLOW)
