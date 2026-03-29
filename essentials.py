@@ -1,6 +1,6 @@
 """
 Essentials by corrupted-application
-Version 0.0.5.1
+Version 0.0.5.2
 """
 
 import subprocess
@@ -11,11 +11,11 @@ import platform
 if os.name == 'nt':
   import winsound # fix for POSIX systems, would result in hang due to winsound being loaded, which is not meant to be used on POSIX systems
 
-ver = "0.0.5.1"
+ver = "0.0.5.2"
 
 def clear():
  if os.name == "posix":
-  subprocess.run("clear")
+  subprocess.run(["clear"])
  elif os.name == "nt":
   subprocess.run("cls", shell=True)
  else:
